@@ -1,0 +1,30 @@
+.relative-positioned {
+  position: relative;
+}
+section.no-padding-top {
+  padding-top: 0;
+}
+
+section.no-padding-bottom {
+  padding-bottom: 0;
+}
+
+.no-padding {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.isHidden {
+  display: none;
+}
+
+.work-shedule.isHidden {
+  display: none;
+}
