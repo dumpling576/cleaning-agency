@@ -21,3 +21,15 @@ gulp.task(
 	)
 );
 
+const imagemin = require('gulp-imagemin');
+
+gulp.task('images', function () {
+  return gulp.src('src/images/**/*.{png,jpg,jpeg,svg,gif}')
+    .pipe(imagemin([
+      imagemin.gifsicle({optimizationLevel: 2}),
+      imagemin.mozjpeg({quality: 75}),
+      imagemin.optipng({optimizationLevel: 5}),
+      imagemin.svgo()
+    ], { verbose: false }))
+    .pipe(gulp.dest('dist/images'));
+});
